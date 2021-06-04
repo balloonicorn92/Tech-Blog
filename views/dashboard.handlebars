@@ -1,0 +1,33 @@
+<section>
+  <h1 class="text-center">Welcome Back!</h1>
+  <h3 class="text-center">Create New Post</h3>
+
+  <form class="new-post-form">
+    <div>
+      <label class="text-center"for="title">Title</label>
+      <input type="text" id="title" name="post-title" style="width: 100%;"/>
+    </div>
+    <label class="text-center" for="blog_text">What is on your mind?</label>
+<div class="input-group mb-3">
+  <textarea type="text" name="blog_text" id="blog-text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1"></textarea>
+    <div class="input-group-prepend">
+    <button class="btn btn-secondary" type="submit" id="create">Create Post</button>
+  </div>
+</div>
+  </form>
+</section>
+{{#if posts.length}}
+<section>
+  <h2 class="text-center">Your Posts</h2>
+  <ol style="list-style-type: none;">
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+
+  
+</section>
+{{/if}}
+<script src="/javascript/new-post.js"></script>

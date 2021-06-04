@@ -1,0 +1,12 @@
+<article class="post rounded border m-1 text-center" style="background: rgba(180, 180, 180, 0.5)">
+  <div class="title">
+    <h3>{{title}}</h3>
+    <p>{{blog_text}}</p>
+  </div>
+  <div class="meta">
+    <a href="/posts/{{id}}">{{comment.length}} {{plural_format "comment" comment.length}}</a>
+    <a href="" class="edit-link mt-1 delete-post-btn">Delete Post</a>
+
+  </div>
+</article>
+<script src="/javascript/delete.js"></script>

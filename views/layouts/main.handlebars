@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloggers Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body style="background-color:LightGray;">
+  <div class="wrapper">
+    <header class="navbar navbar-dark bg-dark">
+      <h2>
+        <a href="/" class="text-light">Bloggers Blog</a>
+      </h2>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard" class="btn-no-style text-light">home</a>
+        <button id="logout" class="btn-no-style text-light">logout</button>
+        {{else}}
+        <a href="/login" class="text-light">login</a>
+        <a href="/" class="text-light">blogs</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main style="background-image: url('https://images.squarespace-cdn.com/content/v1/5a984b5fb27e397fe7568458/1560454173889-BNZDUAA4APGRUIFZSU9A/ke17ZwdGBToddI8pDm48kKAwwdAfKsTlKsCcElEApLR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UegTYNQkRo-Jk4EWsyBNhwKrKLo5CceA1-Tdpfgyxoog5ck0MD3_q0rY3jFJjjoLbQ/drinks-tech-hero.jpg?format=2500w');">
+      {{{ body }}}
+    </main>
+    <footer class="bg-dark text-light">
+      When in doubt...... BLOG it out!
+    </footer>
+  </div>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
