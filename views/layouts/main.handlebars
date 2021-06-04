@@ -17,11 +17,10 @@
       </h2>
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard" class="btn-no-style text-light">home</a>
+        <a href="/" class="text-light">blogs</a>
         <button id="logout" class="btn-no-style text-light">logout</button>
         {{else}}
-        <a href="/login" class="text-light">login</a>
-        <a href="/" class="text-light">blogs</a>
+        <a href="/dashboard" class="btn-no-style text-light">home/ login</a>
         {{/if}}
       </nav>
     </header>
