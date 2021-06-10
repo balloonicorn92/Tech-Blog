@@ -5,12 +5,9 @@
   </div>
   <div class="meta">
     <a href="/posts/{{id}}">{{comment.length}} {{plural_format "comment" comment.length}}</a>
-    {{#if loggedIn}}
     <a href="" class="edit-link mt-1 delete-post-btn">Delete Post</a>
-    {{/if}}
+
 
   </div>
 </article>
-{{#if loggedIn}}
 <script src="/javascript/delete.js"></script>
-{{/if}}
